@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD243">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dimens_100dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailIl"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="162dp"
+            android:hint="Email"
+            android:textColorHint="#FF000000"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/allerta"
+                android:inputType="textEmailAddress"
+                android:textColor="#FF000000"
+                android:textColorHighlight="#FF000000"
+                android:textColorHint="#FF000000"
+                android:textColorLink="#FF000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordIl"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:hint="Contraseña"
+            android:textColorHint="#FF000000"
+            app:layout_constraintTop_toBottomOf="@id/emailIl"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/allerta"
+                android:inputType="textPassword"
+                android:textColor="#FF000000"
+                android:textColorHighlight="#FF000000"
+                android:textColorHint="#FF000000"
+                android:textColorLink="#FF000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forgotPasswordTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allerta"
+            android:text="Olvidé mi contraseña"
+            android:textColor="#FF000000"
+            android:textColorHighlight="#FF000000"
+            android:textColorHint="#FF000000"
+            android:textColorLink="#FF000000"
+            app:layout_constraintEnd_toEndOf="@id/passwordIl"
+            app:layout_constraintTop_toBottomOf="@id/passwordIl" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signInBtn"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/allerta"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:textColorLink="#000000"
+            android:textSize="20sp"
+            app:backgroundTint="#000000"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordIl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signUpTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_padding"
+            android:fontFamily="@font/allerta"
+            android:text="No tienes cuenta? Regístrate"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF000000"
+            android:textColorHint="#FF000000"
+            android:textColorLink="#FF000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signInBtn" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="404dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/emailIl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/koketeagrande" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/orTv"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="58dp"-->
+        <!--            android:text="or"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/signUpTv" />-->
+
+        <!--        <View-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_marginStart="25dp"-->
+        <!--            android:layout_marginEnd="@dimen/standard_padding"-->
+        <!--            android:background="#C4C4C4"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/orTv"-->
+        <!--            app:layout_constraintEnd_toStartOf="@id/orTv"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/orTv" />-->
+
+        <!--        <View-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_marginStart="@dimen/standard_padding"-->
+        <!--            android:layout_marginEnd="25dp"-->
+        <!--            android:background="#C4C4C4"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/orTv"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/orTv"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/orTv" />-->
+
+        <!--        <com.google.android.gms.common.SignInButton-->
+        <!--            android:id="@+id/google_signIn"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/dimens_40dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/orTv"-->
+        <!--            android:layout_marginBottom="@dimen/dimens_100dp"-->
+        <!--            android:layout_marginStart="@dimen/standard_padding"-->
+        <!--            android:layout_marginEnd="@dimen/standard_padding" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
