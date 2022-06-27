@@ -62,7 +62,7 @@ class RegisterFragment : BaseFragment() {
         val fullName = binding.fullNameEt.text.toString()
         val email = binding.emailEt.text.toString()
         val password = binding.passwordEt.text.toString()
-        val localizacion = binding.localizacionEt.text.toString()
+        val localizacion = binding.locationEt.text.toString()
 
         // Verificamos que los campos estén llenos
         if (!TextUtils.isEmpty(fullName)
@@ -77,12 +77,6 @@ class RegisterFragment : BaseFragment() {
             activity?.let {
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(it) {
-
-
-                        val user: FirebaseUser = auth.currentUser!!
-
-                        // Enviamos email de verificación a la cuenta del usuario
-                        verifyEmail(user)
 
                         // Create a new user with a first and last name
                         val userTemp = hashMapOf(

@@ -61,7 +61,7 @@ class HomeFragment : BaseFragment() {
         readDataFromFirestore()
 
         // Cerrar sesion
-        Firebase.auth.signOut()
+        // Firebase.auth.signOut()
     }
 
     private fun readDataFromFirestore(){
